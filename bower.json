@@ -1,0 +1,25 @@
+{
+  "name": "jeenee",
+  "description": "Jeenee mobile top-up",
+  "main": "gulpfile.js",
+  "authors": [
+    "Chidinma"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "mobile",
+    "topup"
+  ],
+  "homepage": "https://github.com/ChidinmaKO/expressrider",
+  "moduleType": [
+    "globals"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
