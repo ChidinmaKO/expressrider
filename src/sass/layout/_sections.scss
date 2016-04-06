@@ -1,0 +1,8 @@
+.section{
+  &--banner{
+    height: 500px;
+    background: url(../../dist/images/slide1.png);
+    background-size: cover;
+    border-bottom: solid thin #f00;
+  }
+}

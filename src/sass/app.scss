@@ -3,12 +3,22 @@
   Designed and Developed by Chidinma
   @since: 04-05-2015
 **/
-@import 'variables';
-@import 'mixins';
-@import 'animations';
-@import 'normalize';
-@import 'h5bp';
-@import 'layout';
-@import 'state';
-@import 'print';
-@import 'utility';
+// Base
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/animations';
+@import 'base/normalize';
+@import 'base/h5bp';
+
+// Components
+@import 'components/buttons';
+
+// Layout
+@import 'layout/main';
+@import 'layout/header';
+@import 'layout/sections';
+
+// Specifity/Cascade delayed modules
+@import 'layout/print';
+@import 'layout/states';
+@import 'base/utility';

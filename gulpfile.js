@@ -15,10 +15,14 @@ var gulp = require('gulp'),
 
 var paths = {
   scripts: [
+    'vendor/assets/components/jquery/dist/jquery.min.js',
+    'vendor/assets/components/bootstrap/dist/js/bootstrap.min.js',
     'src/js/*.js'
   ],
   styles: [
-    'src/sass/*.scss'
+    'vendor/assets/components/bootstrap/dist/css/bootstrap.min.css',
+    'src/sass/*.scss',
+    'src/sass/**/*.scss'
   ]
 }
 

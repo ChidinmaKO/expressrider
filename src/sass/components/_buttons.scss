@@ -1,0 +1,16 @@
+// Buttons
+// Usage:
+// .btn-flat: flat buttons
+.btn{
+  &-flat{
+    border-radius: 0;
+  }
+  &-native{
+    color: $white;
+    background: $color-brand-1;
+    border-color: darken($color-brand-1, 5%);
+    &:hover{
+      color: darken($white, 2%);
+    }
+  }
+}
