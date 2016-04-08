@@ -21,5 +21,6 @@
     }
 }());
 $(function(){
-    "use strict";
+  "use strict";
+  if($().unslider) $('.slider').unslider();
 });

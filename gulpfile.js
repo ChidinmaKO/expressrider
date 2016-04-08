@@ -10,17 +10,20 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload;
-    
+
 
 
 var paths = {
   scripts: [
     'vendor/assets/components/jquery/dist/jquery.min.js',
     'vendor/assets/components/bootstrap/dist/js/bootstrap.min.js',
+    'vendor/assets/components/unslider/dist/js/unslider-min.js',
     'src/js/*.js'
   ],
   styles: [
     'vendor/assets/components/bootstrap/dist/css/bootstrap.min.css',
+    'vendor/assets/components/unslider/dist/css/unslider.css',
+    'vendor/assets/components/unslider/dist/css/unslider-dots.css',
     'src/sass/*.scss',
     'src/sass/**/*.scss'
   ]
@@ -58,8 +61,8 @@ gulp.task('browser-sync', function(){
   });
 });
 gulp.task('watch', function() {
-    gulp.watch(paths.styles, ['styles', reload]); 
-    gulp.watch(paths.scripts, ['scripts', reload]); 
+    gulp.watch(paths.styles, ['styles', reload]);
+    gulp.watch(paths.scripts, ['scripts', reload]);
     gulp.watch('*.html', reload);
 });
 

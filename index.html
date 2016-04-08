@@ -13,8 +13,8 @@
   <link rel="stylesheet" href="dist/css/app.css">
 </head>
 <body>
-  <header class="header container-fluid">
-    <div class="row">
+  <div class="container-fluid">
+    <header class="header row">
       <div class="header__column col-md-3">
         <div class="logo"><img src="dist/images/logo.png" alt="jeenee">Jee₦ee</div>
       </div>
@@ -29,15 +29,40 @@
       <div class="header__column col-md-3 u-txtcenter">
         <a href="https://play.google.com/store/apps/details?id=com.phone.dialer" class="btn btn-flat btn-lg btn-native">GET JEENEE NOW</a>
       </div>
-    </div>
-  </header>
-  <section class="section section--banner container-fluid"></section>
-  <section class="section container-fluid"></section>
-  <section class="section container-fluid"></section>
-  <section class="section container-fluid"></section>
-  <section class="section container-fluid"></section>
-  <section class="section container-fluid"></section>
-  <footer class="footer container-fluid"></footer>
+    </header>
+    <section class="section section--banner row">
+      <div class="slider">
+        <ul class="slider__list">
+          <li><div class="slider__image" style="background-image: url(dist/images/slide1.png)"></div></li>
+          <li><div class="slider__image" style="background-image: url(dist/images/slide2.png)"></div></li>
+        </ul>
+      </div>
+    </section>
+    <section class="section section--welcome row">
+      <h2 class="section__title">Welcome to JEENEE</h2>
+      <p class="section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita nesciunt consequuntur culpa deserunt tempora quae soluta atque quaerat, eos ipsum dicta quibusdam?</p>
+    </section>
+    <section class="section section--workflow row">
+      <h2 class="section__title">How JEENEE works</h2>
+      <p class="section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, molestias! Vero obcaecati magni soluta, nemo asperiores provident vitae aliquam aliquid.</p>
+    </section>
+    <section class="section section--ios row">
+      <h2 class="section__title">iOS version coming soon</h2>
+      <p class="section__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae nostrum labore ad soluta dolorem magni laborum aspernatur. Itaque, quibusdam, molestias!</p>
+    </section>
+    <section class="section section--features row">
+      <h2 class="section__title">Features</h2>
+    </section>
+    <section class="section section--android row">
+      <h2 class="section__title">Available on iOS and Android</h2>
+    </section>
+    <footer class="footer row">
+      <div class="col-md-12">Copyright &copy; 2016</div>
+      <div class="col-md-6">
+        Social stuff
+      </div>
+    </footer>
+  </div>
   <script src="dist/js/app.js"></script>
 </body>
 </html>

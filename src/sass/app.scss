@@ -12,13 +12,16 @@
 
 // Components
 @import 'components/buttons';
+@import 'components/slider';
 
 // Layout
 @import 'layout/main';
 @import 'layout/header';
 @import 'layout/sections';
+@import 'layout/footer';
 
 // Specifity/Cascade delayed modules
 @import 'layout/print';
 @import 'layout/states';
+@import 'base/overrides';
 @import 'base/utility';

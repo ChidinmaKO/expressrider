@@ -23,6 +23,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "unslider": "^2.0.3"
   }
 }
