@@ -9,5 +9,10 @@ function ready(cb){
 ready(function(){
 	"use strict";
 	// Append SVG
-	document.body.insertBefore(c.responseXML.firstChild, document.body.firstChild);
+	document.body.insertBefore(
+    c.responseXML.firstChild, document.body.firstChild
+  );
+  $(document).on('click', '.js-togglemenu', function(){
+    $('html').toggleClass('openNav');
+  });
 });

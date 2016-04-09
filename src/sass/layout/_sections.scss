@@ -3,5 +3,18 @@
   &--banner{
     position: relative;
     height: $banner-height;
+    &__demo{
+      display: none;
+    }
+    @include breakpoint($breakpoint-bootstrap-tablet){
+      height: $banner-desktop-height;
+      &__demo{
+        display: inline;
+        position: absolute;
+        bottom: -240px;
+        right: 0;
+        width: 600px;
+      }
+    }
   }
 }

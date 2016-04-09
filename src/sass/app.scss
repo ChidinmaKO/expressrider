@@ -1,6 +1,7 @@
 /**
   Stylesheet for Jeenee
   Designed and Developed by Chidinma
+  Manifest file
   @since: 04-05-2015
 **/
 // Base
@@ -13,6 +14,8 @@
 // Components
 @import 'components/buttons';
 @import 'components/slider';
+@import 'components/hamburger';
+@import 'components/overlay';
 
 // Layout
 @import 'layout/main';

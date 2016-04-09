@@ -6,6 +6,20 @@
   position: absolute;
   bottom: 10px;
   left: 0; right: 0;
+  z-index: 2;
   width: 200px;
   margin: 0 auto;
+  ol{
+    li{
+      width: 10px;
+      height: 10px;
+      border-color: $color-brand-1;
+      &.unslider-active{ background: $color-brand-1; }
+    }
+  }
+  @include breakpoint($breakpoint-bootstrap-tablet){
+    bottom: 250px;
+    margin: auto;
+    left: 15px; right: auto;
+  }
 }

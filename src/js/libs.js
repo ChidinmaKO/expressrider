@@ -22,5 +22,9 @@
 }());
 $(function(){
   "use strict";
-  if($().unslider) $('.slider').unslider();
+  if($().unslider) $('.slider').unslider({
+    autoplay: true,
+    arrows: false,
+    infinite: true
+  });
 });

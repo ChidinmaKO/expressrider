@@ -2,7 +2,21 @@
   &__list{
   }
   &__image{
-    background-size: 100%;
     height: $banner-height;
+    background-size: 240%;
+    background-repeat: no-repeat;
+    @include breakpoint($breakpoint-android-landscape){
+      background-size: 210%;
+    }
+    @include breakpoint($breakpoint-iphone-landscape){
+      background-size: 180%;
+    }
+    @include breakpoint($breakpoint-tablet-portrait){
+      background-size: 130%;
+    }
+    @include breakpoint($breakpoint-bootstrap-tablet){
+      height: $banner-desktop-height;
+      background-size: 110%;
+    }
   }
 }

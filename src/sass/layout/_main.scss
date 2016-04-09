@@ -12,6 +12,11 @@ body{
   font-size: 1.4rem;
   line-height: 1.6;
   color: #222;
+  transition: transform 500ms ease;
+  .openNav &{
+    right: 0;
+    transform: translate3d(-70%, 0, 0);
+  }
 }
 blockquote{
   position: relative;
