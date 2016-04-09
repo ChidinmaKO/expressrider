@@ -5,16 +5,50 @@
     height: $banner-height;
     &__demo{
       display: none;
+      @include breakpoint($breakpoint-tablet-portrait){
+        display: inline;
+        position: absolute;
+        bottom: -240px;
+        right: -80px;
+        width: 450px;
+      }
     }
     @include breakpoint($breakpoint-bootstrap-tablet){
       height: $banner-desktop-height;
       &__demo{
-        display: inline;
-        position: absolute;
-        bottom: -240px;
         right: 0;
         width: 600px;
       }
     }
+  }
+  &__title{
+    margin-bottom: 20px;
+    font-size: 3.6rem;
+    font-weight: lighter;
+    &--underlined{
+      position: relative;
+      margin-bottom: 30px;
+      &::after{
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0; right: 0;
+        width: 200px;
+        margin: 0 auto;
+        border-bottom: solid 2px $color-brand-1;
+      }
+    }
+  }
+  &__description{
+    margin: 10px 0;
+  }
+  &--workflow, &--welcome{
+    padding: 20px 50px;
+    @include breakpoint($breakpoint-bootstrap-tablet){
+      padding: 20px 100px;
+    }
+  }
+  &--workflow{
+    background: lighten(#e6e8ee, 5%);
   }
 }
