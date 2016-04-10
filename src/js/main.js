@@ -8,11 +8,40 @@ function ready(cb){
 }
 ready(function(){
 	"use strict";
+  // Toggling screen-offset menu on smaller viewports
+  $(document).on('click', '.js-togglemenu', function(){
+    $('html').toggleClass('openNav');
+  });
+  /* Scroll back to top function */
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+        $('.scrollup').fadeIn();
+    } else {
+        $('.scrollup').fadeOut();
+    }
+  });
+  $('.scrollup').click(function () {
+    $("html, body").animate({
+      scrollTop: 0
+    }, 600);
+    return false;
+  });
+  /* Smooth Scroll for in page links */
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
 	// Append SVG
 	document.body.insertBefore(
     c.responseXML.firstChild, document.body.firstChild
   );
-  $(document).on('click', '.js-togglemenu', function(){
-    $('html').toggleClass('openNav');
-  });
 });

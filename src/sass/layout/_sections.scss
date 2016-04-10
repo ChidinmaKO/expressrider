@@ -42,7 +42,7 @@
   &__description{
     margin: 10px 0;
   }
-  &--workflow, &--welcome{
+  &--workflow, &--welcome, &--features, &--ios, &--android{
     padding: 20px 50px;
     @include breakpoint($breakpoint-bootstrap-tablet){
       padding: 20px 100px;
