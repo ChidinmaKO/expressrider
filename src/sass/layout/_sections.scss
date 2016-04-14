@@ -51,4 +51,9 @@
   &--workflow{
     background: lighten(#e6e8ee, 5%);
   }
+  &--ios{
+    @include tinted-bg($black, .5, '../../dist/images/ios-section-bg.jpg', 100%);
+    color: $white;
+    height: 600px;
+  }
 }
