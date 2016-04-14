@@ -24,7 +24,7 @@
   &__title{
     margin-bottom: 20px;
     font-size: 3.6rem;
-    font-weight: lighter;
+    font-weight: 100;
     &--underlined{
       position: relative;
       margin-bottom: 30px;
@@ -53,6 +53,7 @@
   }
   &--ios{
     @include tinted-bg($black, .5, '../../dist/images/ios-section-bg.jpg', 100%);
+    background-attachment: fixed;
     color: $white;
     height: 600px;
   }

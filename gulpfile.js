@@ -5,12 +5,13 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     postcss = require('gulp-postcss'),
     nano = require('gulp-cssnano'),
-    concatCSS = require('gulp-concat-css'),
-    autoprefixer = require('autoprefixer')
+    concatCss = require('gulp-concat-css'),
+    autoprefixer = require('autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
-    browserSync = require('browser-sync');
+    browserSync = require('browser-sync'),
+    reload = browserSync.reload;
 
-var reload = browserSync.reload;
+
 
 var paths = {
   scripts: [
@@ -28,38 +29,41 @@ var paths = {
   ]
 }
 
-gulp.task('stylesheets', function(){
-  var preprocessors = [];
-  return gulp.src(paths.styles)
-         .pipe(sourcemaps.init())
-         .pipe(sass({ outputStyle: 'compressed' }))
-         //.pipe(concatCSS('app.css'))
-         .pipe(postcss(preprocessors))
-         .pipe(nano())
-         .pipe(sourcemaps.write('maps'))
-         .pipe(gulp.dest('dist/css'))
-         .pipe(reload({ stream: true }))
+
+gulp.task('styles', function() {
+    var processors = [
+    autoprefixer({browsers: ['last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']})
+    ]
+    gulp.src(paths.styles)
+        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(concatCss("app.css"))
+        .pipe(postcss(processors))
+        .pipe(nano())
+        .pipe(gulp.dest('dist/css'))
+        .pipe(reload({stream:true}));
 });
 
-gulp.task('scripts', function(){
-  return gulp.src(paths.scripts)
-         .pipe(sourcemaps.init())
-         .pipe(concat('app.js'))
-         .pipe(uglify())
-         .pipe(sourcemaps.write('maps'))
-         .pipe(gulp.dest('dist/js'))
-         .pipe(reload({ stream: true }))
+gulp.task('scripts', function() {
+    gulp.src(paths.scripts)
+    	.pipe(sourcemaps.init())
+        .pipe(concat('app.js'))
+        .pipe(uglify())
+        .pipe(sourcemaps.write('dist/maps'))
+        .pipe(gulp.dest('dist/js'))
+        .pipe(reload({stream:true}));
 });
 
 gulp.task('browser-sync', function(){
-  browserSync({ server: { baseDir: './' } });
+  browserSync({
+    server: {
+      baseDir: "./"
+    }
+  });
+});
+gulp.task('watch', function() {
+    gulp.watch(paths.styles, ['styles', reload]);
+    gulp.watch(paths.scripts, ['scripts', reload]);
+    gulp.watch('*.html', reload);
 });
 
-gulp.task('watch', function(){
-  gulp.watch(paths.styles, ['stylesheets', reload]);
-  gulp.watch(paths.scripts, ['scripts', reload]);
-  gulp.watch('*.html', reload);
-});
-
-
-gulp.task('default', ['watch', 'browser-sync', 'stylesheets', 'scripts']);
+gulp.task('default', ['styles', 'scripts', 'browser-sync', 'watch']);
