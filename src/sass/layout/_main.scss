@@ -52,6 +52,12 @@ cite{
   margin: 0 auto;
   font-size: 2.5rem;
   line-height: .5;
+  color: #555;
+  &__link{
+    &:hover{
+      text-decoration: none;
+    }
+  }
   img{
     vertical-align: middle;
   }
