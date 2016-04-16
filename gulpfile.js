@@ -18,12 +18,14 @@ var paths = {
     'vendor/assets/components/jquery/dist/jquery.min.js',
     'vendor/assets/components/bootstrap/dist/js/bootstrap.min.js',
     'vendor/assets/components/unslider/dist/js/unslider-min.js',
+    'vendor/assets/components/slick-carousel/slick/slick.min.js',
     'src/js/*.js'
   ],
   styles: [
     'vendor/assets/components/bootstrap/dist/css/bootstrap.min.css',
     'vendor/assets/components/unslider/dist/css/unslider.css',
     'vendor/assets/components/unslider/dist/css/unslider-dots.css',
+    'vendor/assets/components/slick-carousel/slick/slick.css',
     'src/sass/*.scss',
     'src/sass/**/*.scss'
   ]

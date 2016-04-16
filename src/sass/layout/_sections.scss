@@ -42,7 +42,7 @@
   &__description{
     margin: 10px 0;
   }
-  &--workflow, &--welcome, &--features, &--ios, &--android{
+  &--workflow, &--welcome, &--features, &--ios{
     padding: 20px 50px;
     @include breakpoint($breakpoint-bootstrap-tablet){
       padding: 20px 100px;
@@ -50,11 +50,70 @@
   }
   &--workflow{
     background: lighten(#e6e8ee, 5%);
+    &__preview{
+      margin: 40px 0;
+    }
+  }
+  &--welcome{
+    background: url(../../dist/images/welcome-section-bg.png) no-repeat;
+    background-size: 100% 200px;
+    background-position: bottom;
+    @include breakpoint($breakpoint-iphone-landscape){
+      background-position: 60% 70%;
+    }
+    &__phone{
+      width: 80%;
+      max-width: 600px;
+      margin-top: 20px;
+    }
   }
   &--ios{
-    @include tinted-bg($black, .5, '../../dist/images/ios-section-bg.jpg', 100%);
-    background-attachment: fixed;
+    @include tinted-bg($black, .5, '../../dist/images/ios-section-bg.jpg', 180%);
+    background-position: top;
     color: $white;
-    height: 600px;
+    @include breakpoint($breakpoint-tablet-landscape){
+      background-size: 100%;
+      background-attachment: fixed;
+    }
+    &__phones{
+      width: 90%;
+      max-width: 800px;
+      margin: 60px 0;
+    }
+  }
+  &--android{
+    padding: 0 50px 20px;
+    @include breakpoint($breakpoint-bootstrap-tablet){
+      padding: 0 100px 20px;
+    }
+    &__divider{
+      margin-bottom: 50px;
+      border-top: solid 2px #555;
+    }
+    &__phones{
+      width: 80%;
+      max-width: 700px;
+      margin: 30px 0;
+    }
+    .section__description{
+      width: 90%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    &__download{
+      margin: 10px 0;
+      img{
+        display: block;
+        width: 150px;
+        margin: 0 auto 10px;
+        @include breakpoint($breakpoint-iphone-landscape){
+          display: inline-block;
+          margin: 0;
+          &:first-child{
+            margin-right: 40px;
+          }
+        }
+      }
+    }
   }
 }

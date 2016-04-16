@@ -20,6 +20,29 @@
   @include breakpoint($breakpoint-bootstrap-tablet){
     bottom: 250px;
     margin: auto;
-    left: 15px; right: auto;
+    left: 25px; right: auto;
   }
+}
+.slick-slider{
+  position: relative;
+}
+.slick-slide{
+  text-align: center;
+  img{
+    margin: 0 auto;
+  }
+}
+.slick-prev, .slick-next{
+  position: absolute;
+  top: 40%;
+  font-size: 7rem;
+  font-weight: 100;
+  color: rgba($black, .3);
+  cursor: pointer;
+}
+.slick-prev{
+  left: -40px;
+}
+.slick-next{
+  right: -40px;
 }
