@@ -6,14 +6,127 @@
   <title>Jeenee</title>
   <meta name="description" content="Jeneee is a ...">
   <meta name="author" content="Chidinma">
-  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="dns-prefetch" href="//themes.googleusercontent.com">
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <link rel="stylesheet" href="dist/css/app.css">
 </head>
 <body>
-  <h1>Hello World</h1>
+  <span class="scrollup"><i class="fa fa-chevron-up"></i></span>
+  <div class="container-fluid">
+    <header class="header row">
+      <button class="c-hamburger c-hamburger--htx js-togglemenu">
+        <span>toggle menu</span>
+      </button>
+      <div class="header__column col-md-3">
+        <a href="./" class="logo__link"><div class="logo"><img src="dist/images/logo.png" alt="jeenee">Jee₦ee</div></a>
+      </div>
+      <div class="header__column col-md-9 u-txtcenter">
+        <nav class="header__navigation">
+          <a href="#welcome">About Jenee</a>
+          <a href="#workflow">How it Works</a>
+          <a href="#features">Features</a>
+          <a href="mailto:contact@jeenee.com">Contact Us</a>
+        </nav>
+        <a href="https://play.google.com/store/apps/details?id=com.phone.dialer" class="btn btn-flat btn-native">GET JEENEE NOW</a>
+      </div>
+    </header>
+    <section class="section section--banner row">
+      <div class="overlay">
+        <img src="dist/images/jeenee.gif" class="section--banner__demo" alt="jeenee hands">
+        <h3>Experience The</h3>
+        <h1>Fastest Mobile <br>TopUp Ever</h1>
+        <a href="https://play.google.com/store/apps/details?id=com.phone.dialer" class="btn btn-native btn-flat btn-lg">Get Started</a>
+        <a href="#welcome" class="btn btn-native btn-flat btn-lg">Explore JEENEE</a>
+      </div>
+      <div class="slider">
+        <ul class="slider__list">
+          <li><div class="slider__image" style="background-image: url(dist/images/slide1.png)"></div></li>
+          <li><div class="slider__image" style="background-image: url(dist/images/slide2.png)"></div></li>
+          <li><div class="slider__image" style="background-image: url(dist/images/slide3.png)"></div></li>
+        </ul>
+      </div>
+    </section>
+    <section class="section section--welcome row" id="welcome">
+      <h2 class="section__title section__title--underlined">Welcome to JEENEE</h2>
+      <p class="section__description">Jeenee is a secure mobile communications platform that lists all businesses as Pypes
+      in a searchable catalogue. Users connect to Pypes and interact with businesses in private chats enabling businesses to respond directly or broadcast messages to their entire audience.Pypestream is a secure mobile communications platform that lists all businesses as Pypes  in a searchable catalogue. Users connect to Pypes and interact with businesses in private chats enabling businesses to respond directly or broadcast messages to their entire audience.</p>
+      <p><img src="dist/images/welcome-phones.png" class="section--welcome__phone" alt="phones"></p>
+    </section>
+    <section class="section section--workflow row" id="workflow">
+      <h2 class="section__title section__title--underlined">How JEENEE works</h2>
+      <p class="section__description">Pypestream is a secure mobile communications platform that lists all businesses as Pypes
+      in  a searchable catalogue. Users connect to Pypes and interact with businesses in private chats enabling businesses to respond directly or broadcast messages to their entire audience.Pypestream is a secure mobile communications platform that lists all businesses as Pypes  in a searchable catalogue. Users connect to Pypes and interact with businesses in private chats enabling businesses to respond directly or broadcast messages to their entire audience.</p>
+      <div class="carousel section--workflow__preview">
+        <div class="carousel__item"><img src="dist/images/how-phone-1.png" alt=""></div>
+        <div class="carousel__item"><img src="dist/images/how-phone-2.png" alt=""></div>
+        <div class="carousel__item"><img src="dist/images/how-phone-3.png" alt=""></div>
+        <div class="carousel__item"><img src="dist/images/how-phone-1.png" alt=""></div>
+        <div class="carousel__item"><img src="dist/images/how-phone-4.png" alt=""></div>
+      </div>
+    </section>
+    <section class="section section--ios row">
+      <h2 class="section__title">iOS version coming soon</h2>
+      <img src="dist/images/ios-phones.png" class="section--ios__phones" alt="iOS phones">
+    </section>
+    <section class="section section--features row" id="features">
+      <h2 class="section__title section__title--underlined">Features</h2>
+      <div class="feature row">
+        <div class="col-md-3 u-txtcenter">
+          <div class="feature__media">
+            <img src="dist/images/feature-signup.png" alt="signup">
+          </div>
+          <h4 class="feature__title">One Time Signup</h4>
+          <p class="feature__description">sign up to Jeenee one time only, recharging your phone comes as fast as you could never thought.</p>
+        </div>
+        <div class="col-md-3 u-txtcenter">
+          <div class="feature__media">
+            <img src="dist/images/feature-recharge.png" alt="recharge">
+          </div>
+          <h4 class="feature__title">Recharge in Seconds</h4>
+          <p class="feature__description">Tab. Tab. Top up! The fastest mobile recharge app ever in Nigeria.</p>
+        </div>
+        <div class="col-md-3 u-txtcenter">
+          <div class="feature__media">
+            <img src="dist/images/feature-send.png" alt="send">
+          </div>
+          <h4 class="feature__title">Send Card in a Blink</h4>
+          <p class="feature__description">Share airtime with your friends. Jeenee allows you to send card to a friend either by adding number or pick from your contact.</p>
+        </div>
+        <div class="col-md-3 u-txtcenter">
+          <div class="feature__media">
+            <img src="dist/images/feature-load.png" alt="load">
+          </div>
+          <h4 class="feature__title">Load up data</h4>
+          <p class="feature__description">The fastest way to load up data. With Jeenee internet subscription just got fast and effortless.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section section--android row">
+      <hr class="section--android__divider">
+      <h2 class="section__title">Available on iOS and Android</h2>
+      <p class="section__description">Jeenee is available on iOS and Android devices, download now and enjoy the fastest way to recharge</p>
+      <div class="section--android__download">
+        <a href="https://play.google.com/store/apps/details?id=com.phone.dialer"><img src="dist/images/android.png" alt=""></a>
+        <img src="dist/images/ios.png" alt="">
+      </div>
+      <img src="dist/images/download-phones.png" class="section--android__phones" alt="phones">
+    </section>
+    <footer class="footer row">
+      <div class="col-md-6">Copyright © 2016 Jeenee All Rights Reserved &nbsp;| <img src="dist/images/author-logo.png" class="footer__logo" alt="author logo"></div>
+      <div class="col-md-6">
+        <div class="footer__social-icons">
+          <a href=""><i class="fa fa-facebook" aria-hidden="true"> </i></a>
+          <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+          <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
   <script src="dist/js/app.js"></script>
 </body>
 </html>

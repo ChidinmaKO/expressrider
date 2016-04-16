@@ -1,0 +1,46 @@
+.overlay{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  background: rgba($black, .3);
+  color: $white;
+  text-align: left;
+  overflow: hidden;
+  h1, h3{
+    margin: 5px 0;
+    text-transform: uppercase;
+  }
+  h3{
+    font-size: 2.7rem;
+    font-weight: lighter;
+  }
+  h1{
+    font-size: 3.8rem;
+    font-weight: bolder;
+  }
+  .btn{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  @include breakpoint($breakpoint-tablet-portrait){
+    .btn{
+      width: auto;
+      padding: 10px 30px;
+      margin-bottom: auto;
+      &:first-of-type{
+        margin-right: 20px;
+      }
+    }
+  }
+  @include breakpoint($breakpoint-bootstrap-tablet){
+    padding: 100px;
+    h1{
+      font-size: 5rem;
+    }
+    h3{
+      font-size: 3.2rem;
+    }
+  }
+}

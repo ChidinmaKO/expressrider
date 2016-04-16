@@ -21,35 +21,42 @@
     }
 }());
 $(function(){
-    "use strict";
-    var breakpoints = {small: 480, medium: 768, large: 1024},
-        viewport    = document.documentElement.clientWidth;
-    // iPicture
-    if($().iPicture)
-        $( ".js-iPicture" ).iPicture();
-    // Slippry Slider http://slippry.com/
-    var thumbs = jQuery('#thumbnails').slippry({
-        // general elements & wrapper
-        slippryWrapper: '<div class="slippry_box preview__slider thumbnails" />',
-        // options
-        transition: 'horizontal',
-        pager: false,
-        auto: false,
-        onSlideBefore: function (el, index_old, index_new) {
-            jQuery('.thumbs a img').removeClass('active');
-            jQuery('img', jQuery('.thumbs a')[index_new]).addClass('active');
-        }
+  "use strict";
+  // http://unslider.com/
+  if($().unslider){
+    $('.slider').unslider({
+      autoplay: true,
+      arrows: false,
+      infinite: true
     });
-        
-    jQuery('.thumbs a').click(function () {
-        thumbs.goToSlide($(this).data('slide'));
-        return false;
-    });
-    // Slick Carousel https://kenwheeler.github.io/slick/
+  }
+  // https://kenwheeler.github.io/slick/
+  if($().slick){
     $('.carousel').slick({
-        slidesToShow: viewport < breakpoints.small ? 1 : viewport < breakpoints.medium ? 2 : 3,
-        slidesToScroll: 1,
-        dots: true,
-        speed: 300
+      infinite: true,
+      slidesToShow: 4,
+      prevArrow: '<span class="slick-prev">&lang;</span>',
+      nextArrow: '<span class="slick-next">&rang;</span>',
+      responsive: [
+        {
+          breakpoint: 1170,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 820,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 586,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
     });
+  }
 });

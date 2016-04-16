@@ -1,0 +1,48 @@
+// Unslider overrides
+.unslider-arrow{
+  top: 240px;
+}
+.unslider-nav{
+  position: absolute;
+  bottom: 10px;
+  left: 0; right: 0;
+  z-index: 2;
+  width: 200px;
+  margin: 0 auto;
+  ol{
+    li{
+      width: 10px;
+      height: 10px;
+      border-color: $color-brand-1;
+      &.unslider-active{ background: $color-brand-1; }
+    }
+  }
+  @include breakpoint($breakpoint-bootstrap-tablet){
+    bottom: 250px;
+    margin: auto;
+    left: 25px; right: auto;
+  }
+}
+.slick-slider{
+  position: relative;
+}
+.slick-slide{
+  text-align: center;
+  img{
+    margin: 0 auto;
+  }
+}
+.slick-prev, .slick-next{
+  position: absolute;
+  top: 40%;
+  font-size: 7rem;
+  font-weight: 100;
+  color: rgba($black, .3);
+  cursor: pointer;
+}
+.slick-prev{
+  left: -40px;
+}
+.slick-next{
+  right: -40px;
+}

@@ -1,0 +1,35 @@
+.footer{
+  background: lighten($black, 15%);
+  color: $white;
+  text-align: center;
+  a{
+    color: darken($white, 50%);
+  }
+  .col-md-6{
+    padding: 20px 10px;
+  }
+  &__logo{
+    width: 100px;
+    vertical-align: top;
+    margin-left: 10px;
+    margin-top: -6px;
+  }
+  &__social-icons{
+    font-size: 1.8rem;
+    a{
+      display: inline-block;
+      &:not(:last-of-type){
+        margin-right: 10px;
+      }
+    }
+  }
+  @include breakpoint($breakpoint-bootstrap-tablet){
+    text-align: left;
+    .col-md-6{
+      padding: 30px 60px;
+      &:last-child{
+        text-align: right;
+      }
+    }
+  }
+}

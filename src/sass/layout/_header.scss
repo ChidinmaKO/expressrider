@@ -1,0 +1,52 @@
+.header{
+	border-bottom: solid thin rgba($black, .1);
+  &__column{
+    padding: 14px 10px;
+    &.col-md-9{
+      @include breakpoint($breakpoint-bootstrap-tablet){
+        padding: 14px 30px;
+        text-align: right;
+      }
+    }
+    .btn{
+      width: 100%;
+      @include breakpoint($breakpoint-bootstrap-tablet){
+        width: auto;
+        margin: 5px 20px 0 0;
+      }
+    }
+  }
+  &__navigation{
+    position: fixed;
+    top: 0;
+    right: -70%;
+    width: 70%;
+    height: 100%;
+    padding: 10px 0;
+    background: $color-brand-1;
+    a{
+      display: block;
+      margin-bottom: 2px;
+      padding: 10px;
+      background-color: darken($color-brand-1, 10%);
+      border-bottom: solid thin darken($color-brand-1, 15%);
+      color: darken($white, 80%);
+      text-decoration: none;
+    }
+    @include breakpoint($breakpoint-bootstrap-tablet){
+      position: static;
+      float: left;
+      width: auto;
+      background: none;
+      a{
+        display: inline-block;
+        margin-left: 30px;
+        padding: 0;
+        background: none;
+        border: 0;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
